@@ -19,12 +19,21 @@ export class servicePost {
   }
 
 
-  public getPostByUserId(id:any): any[] {
-    let filterPost: any[] = [];
-    this.getPost().subscribe((res) => {
-      filterPost = res;
-      console.log("servicio post",filterPost);
-    });
-    return filterPost;
+  public getPostByUserId(id: any): Observable<any> {
+    return this.http
+      .get<Array<any>>(`${API_URL}/posts`)
+      .pipe(
+        map((data) =>
+          data.filter((post:any) => post.userId === parseInt(id))
+        ))
+  }
+
+  public getComentByPostId(id: any): Observable<any> {
+    return this.http
+      .get<Array<any>>(`${API_URL}/posts/${id}/comments`)
+      .pipe(
+        map((data) =>
+          data.filter((coment:any) => coment.postId === parseInt(id))
+        ))
   }
 }

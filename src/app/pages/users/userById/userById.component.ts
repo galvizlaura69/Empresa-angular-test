@@ -12,6 +12,7 @@ import { ServiceUsers } from 'src/services/serviceUsers';
 export class UserByIdComponent {
   user= {id:null,name:"", username:"",phone:234, email:""};
   postByUser ={};
+  comentByPost = {};
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -27,9 +28,17 @@ export class UserByIdComponent {
       this.user = res;
       console.log("usuario seleccionado",this.user);
     });
-    this.postByUser = this.servicePost.getPostByUserId(this.user.id);
-    console.log("todos los post",this.postByUser)
+      this.servicePost.getPostByUserId(this.user.id).subscribe((res) => {
+      this.postByUser = res;
+      console.log("sus post",this.postByUser);
+    });
+    this.servicePost.getComentByPostId(this.user.id).subscribe((res) => {
+      this.comentByPost  = res;
+      console.log(" sus comentarios por post",this.comentByPost );
+    });
   }
+
+
 
   gotoHome() {
     this.router.navigate(['/']);
