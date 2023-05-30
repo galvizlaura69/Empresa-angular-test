@@ -11,17 +11,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './pages/home/home.component';
 import { ProductComponent } from './pages/products/product/product.component';
 import { ProductsComponent } from './pages/products/products.component';
+import { DialogoConfirmacionComponent } from './components/dialogo-confirmacion/dialogo-confirmacion.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
-  imports: [BrowserModule,AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    MatDialogModule,
+  ],
   declarations: [
     AppComponent,
     CardInfoComponent,
     CelsiusPipe,
     HomeComponent,
     ProductComponent,
-    ProductsComponent],
+    ProductsComponent,
+    DialogoConfirmacionComponent],
   providers: [HttpClient, ServiceUsers],
   bootstrap: [AppComponent],
 })
