@@ -7,10 +7,14 @@ import { AppComponent } from './app.component';
 import { ServiceUsers } from '../services/serviceUsers';
 import { CardInfoComponent } from './components/cards/cardInfo/cardInfo.component';
 import { CelsiusPipe } from '../pipes/celsius.pipe';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './routeFiles/home/home.component';
+import { ProductsComponent } from './routeFiles/products/products.component';
+import { ProductComponent } from './routeFiles/products/product/product.component';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, HttpClientModule],
-  declarations: [AppComponent, CardInfoComponent, CelsiusPipe],
+  imports: [BrowserModule,AppRoutingModule, FormsModule, HttpClientModule],
+  declarations: [AppComponent, CardInfoComponent, CelsiusPipe, HomeComponent, ProductsComponent, ProductComponent],
   providers: [HttpClient, ServiceUsers],
   bootstrap: [AppComponent],
 })
