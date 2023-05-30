@@ -7,23 +7,24 @@ const API_URL = `https://jsonplaceholder.typicode.com`;
 @Injectable({
   providedIn: 'root',
 })
-export class ServiceUsers {
+export class servicePost {
   constructor(private http: HttpClient) {}
 
   public getPost(): Observable<any> {
     return this.http
       .get(
-        `${API_URL}/post`
+        `${API_URL}/posts`
       )
       .pipe(map((res) => res));
   }
 
 
-  public getPostByUserId(id:any): Observable<any> {
-    return this.http
-      .get(
-        `${API_URL}/post`
-      )
-      .pipe(map((res) => res));//aqui se hace el filtro
+  public getPostByUserId(id:any): any[] {
+    let filterPost: any[] = [];
+    this.getPost().subscribe((res) => {
+      filterPost = res;
+      console.log(filterPost);
+    });
+    return filterPost;
   }
 }
