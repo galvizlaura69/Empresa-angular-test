@@ -9,14 +9,13 @@ import { ServiceUsers } from '../services/serviceUsers';
 export class AppComponent implements OnInit {
   weatherCurrent: any;
 
-  constructor(private api: ServiceUsers) {}
+  constructor(private serviceUsers: ServiceUsers) {}
 
 
   ngOnInit() {
-    this.api.getUsers( ).subscribe((res) => {
+    this.serviceUsers.getUsers( ).subscribe((res) => {
       this.weatherCurrent = res;
       console.log(this.weatherCurrent);
-
     });
   }
 }

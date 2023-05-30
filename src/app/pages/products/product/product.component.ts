@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ServiceUsers } from 'src/services/serviceUsers';
 
 @Component({
   selector: 'product',
@@ -7,16 +8,20 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./product.component.css'],
 })
 export class ProductComponent {
-  product = {id:0};
+  user= {id:null,name:""};
   constructor(
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private serviceUsers: ServiceUsers
   ) {}
 
   ngOnInit() {
     this.route.params.subscribe((param) => {
-      console.log("id",param['id']);
-      this.product.id = param['id'];
+      this.user.id = param['id'];
+    });
+    this.serviceUsers.getUsersById(this.user.id).subscribe((res) => {
+      this.user = res;
+      console.log(this.user);
     });
   }
 

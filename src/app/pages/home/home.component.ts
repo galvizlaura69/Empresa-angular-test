@@ -11,7 +11,7 @@ export class HomeComponent {
   mostrarDialogo(): void {
     this.dialogo
       .open(DialogoConfirmacionComponent, {
-        data: `¿Te gusta programar en TypeScript?`
+        data:{text:"mensaje", url:"http.google"}
       })
       .afterClosed()
       .subscribe((confirmado: Boolean) => {

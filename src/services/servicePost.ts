@@ -10,20 +10,20 @@ const API_URL = `https://jsonplaceholder.typicode.com`;
 export class ServiceUsers {
   constructor(private http: HttpClient) {}
 
-  public getUsers(): Observable<any> {
+  public getPost(): Observable<any> {
     return this.http
       .get(
-        `${API_URL}/users`
+        `${API_URL}/post`
       )
       .pipe(map((res) => res));
   }
 
 
-  public getUsersById(id:any): Observable<any> {
+  public getPostByUserId(id:any): Observable<any> {
     return this.http
       .get(
-        `${API_URL}/users/${id}`
+        `${API_URL}/post`
       )
-      .pipe(map((res) => res));
+      .pipe(map((res) => res));//aqui se hace el filtro
   }
 }
