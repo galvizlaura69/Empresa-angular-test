@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../services/api.service';
-import cities from '../const/cities';
+import { ServiceUsers } from '../services/serviceUsers';
 
 @Component({
   selector: 'my-app',
@@ -9,20 +8,15 @@ import cities from '../const/cities';
 })
 export class AppComponent implements OnInit {
   weatherCurrent: any;
-  idSelectedCity = 1;
-  cityList = cities;
-  constructor(private api: ApiService) {}
 
-  selectChange(event:any) {
-    this.idSelectedCity = event.target.value;
-    this.api.get(this.idSelectedCity).subscribe((res) => {
-      this.weatherCurrent = res;
-    });
-  }
+  constructor(private api: ServiceUsers) {}
+
 
   ngOnInit() {
-    this.api.get(this.idSelectedCity).subscribe((res) => {
+    this.api.getUsers( ).subscribe((res) => {
       this.weatherCurrent = res;
+      console.log(this.weatherCurrent);
+
     });
   }
 }
