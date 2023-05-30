@@ -15,7 +15,6 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.serviceUsers.getUsers( ).subscribe((res) => {
       this.weatherCurrent = res;
-      console.log(this.weatherCurrent);
     });
   }
 }

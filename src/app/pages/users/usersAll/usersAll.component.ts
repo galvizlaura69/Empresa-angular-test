@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { ServiceUsers } from 'src/services/serviceUsers';
 
 @Component({
-  selector: 'products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css'],
+  selector: 'usersAll',
+  templateUrl: './usersAll.component.html',
+  styleUrls: ['./usersAll.component.css'],
 })
-export class ProductsComponent implements OnInit{
+export class UsersAllComponent implements OnInit{
   public users :any ;
 
   constructor(
@@ -18,10 +18,10 @@ export class ProductsComponent implements OnInit{
   ngOnInit() {
     this.serviceUsers.getUsers( ).subscribe((res) => {
       this.users = res;
-      console.log(this.users);
+      console.log("todos los usuarios",this.users);
     });
   }
-  productSelected(id:any) {
-    this.router.navigate(['/product', id]);
+  userSelected(id:any) {
+    this.router.navigate(['/user', id]);
   }
 }

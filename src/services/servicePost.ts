@@ -23,7 +23,7 @@ export class servicePost {
     let filterPost: any[] = [];
     this.getPost().subscribe((res) => {
       filterPost = res;
-      console.log(filterPost);
+      console.log("servicio post",filterPost);
     });
     return filterPost;
   }

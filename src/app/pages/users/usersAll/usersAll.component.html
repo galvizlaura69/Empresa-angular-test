@@ -1,9 +1,9 @@
 <div class="row">
-<p>productos</p>
+<p>todos los usuarios</p>
 <ul>
   <li *ngFor="let user of users">
     <p>{{ user.name }}</p>
-    <button mat-button (click)="productSelected(user.id)">navegar</button>
+    <button mat-button (click)="userSelected(user.id)">Ver mas</button>
   </li>
 </ul>
 </div>
