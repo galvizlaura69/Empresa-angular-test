@@ -21,6 +21,7 @@ import { PopUpComponent } from './components/modal/pop-up.component';
 import { ServiceUsers } from '../services/serviceUsers';
 import { servicePost } from '../services/servicePost';
 import { serviceAlbumes } from '../services/serviceAlbumes';
+import { CapitalizePipe } from 'src/pipes/capitalize.pipe';
 
 
 
@@ -43,6 +44,7 @@ import { serviceAlbumes } from '../services/serviceAlbumes';
     AlbumesComponent,
     PostListComponent,
     CommentListComponent,
+    CapitalizePipe
   ],
   providers: [
     HttpClient,

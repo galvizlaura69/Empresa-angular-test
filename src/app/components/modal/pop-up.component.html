@@ -5,6 +5,6 @@
     mat-button (click)="closeDialog()">X</button>
   </div>
   <p class="title" mat-dialog-title>ALBUM # {{body.albumId}}</p>
-  <p class="title-popUp" mat-dialog-title> {{ body.title | titlecase }}</p>
+  <p class="title-popUp" mat-dialog-title> {{ body.title | capitalize}}</p>
   <img  [src]="body.url" class="thumb"/>
 </div>

@@ -5,15 +5,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class CapitalizePipe implements PipeTransform {
 
-  transform(items: any[], searchTerm: any, searchBy: string) {
-
-    if (!searchTerm) {
-      return items;
-    }
-
-    return items.filter(item => {
-      const currentItem = item[searchBy];
-      return currentItem.toString().toLowerCase().includes(searchTerm.trim().toLowerCase());
-    });
+  transform(text: string) {
+    const lower = text.toLocaleLowerCase();
+    return text.charAt(0).toUpperCase() + lower.slice(1);
   }
 }
