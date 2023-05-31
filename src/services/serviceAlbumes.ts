@@ -3,8 +3,9 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { albumModel } from 'src/app/models/album-Model.model';
+import API_URL from 'src/const/api';
 
-const API_URL = `https://jsonplaceholder.typicode.com`;
+
 
 @Injectable({
   providedIn: 'root',

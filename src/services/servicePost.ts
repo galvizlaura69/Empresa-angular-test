@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-const API_URL = `https://jsonplaceholder.typicode.com`;
+import API_URL from 'src/const/api';
 
 @Injectable({
   providedIn: 'root',
