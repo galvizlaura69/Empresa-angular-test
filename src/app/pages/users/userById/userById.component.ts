@@ -29,8 +29,6 @@ export class UserByIdComponent {
     });
   }
 
-
-
   gotoHome() {
     this.router.navigate(['/']);
   }

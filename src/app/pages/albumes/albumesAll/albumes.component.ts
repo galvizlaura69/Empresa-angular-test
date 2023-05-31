@@ -34,16 +34,10 @@ export class AlbumesComponent implements OnInit{
     console.log("selected",this.selectedAlbum);
     this.dialogo
     .open(DialogoConfirmacionComponent, {
-      data:{text:this.selectedAlbum.title, url:this.selectedAlbum.url}
+      data:{title:this.selectedAlbum.title, url:this.selectedAlbum.url}
     })
     .afterClosed()
-    .subscribe((confirmado: Boolean) => {
-      if (confirmado) {
-        alert("¡A mí también!");
-      } else {
-        alert("Deberías probarlo, a mí me gusta :)");
-      }
-    });
+    .subscribe();
   });
 
 

@@ -5,3 +5,8 @@
   position: fixed;
   top: 0;
 }
+.thumb {
+  width: 300px;
+  margin: auto;
+  max-width: 90%;
+}

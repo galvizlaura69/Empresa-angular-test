@@ -15,10 +15,6 @@ constructor(
     cerrarDialogo(): void {
       this.dialogo.close(false);
     }
-    confirmado(): void {
-      this.dialogo.close(true);
-    }
-
   ngOnInit() {
   }
 
