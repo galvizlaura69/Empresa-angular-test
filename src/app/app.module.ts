@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule} from '@angular/material/button';
+
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -27,7 +29,8 @@ import { CommentListComponent } from './components/commentList/comment-list.comp
     FormsModule,
     HttpClientModule,
     MatDialogModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    MatButtonModule
   ],
   declarations: [
     AppComponent,
