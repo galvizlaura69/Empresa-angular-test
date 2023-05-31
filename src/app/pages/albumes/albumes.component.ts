@@ -18,7 +18,7 @@ export class AlbumesComponent implements OnInit{
   constructor(
     private router:Router,
     private serviceAlbumes: serviceAlbumes,
-    public dialogo: MatDialog
+    public dialog: MatDialog
   ) {}
 
   ngOnInit () {
@@ -27,10 +27,10 @@ export class AlbumesComponent implements OnInit{
     });
   }
 
-  mostrarDialogo(id:number): void {
+  showDialog(id:number): void {
    this.serviceAlbumes.getAlbumById(id).subscribe((res) => {
     this.selectedAlbum = res;
-    this.dialogo
+    this.dialog
     .open(PopUpComponent, {
       data:{title:this.selectedAlbum.title, url:this.selectedAlbum.url}
     })

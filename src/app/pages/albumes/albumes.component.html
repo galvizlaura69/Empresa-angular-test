@@ -4,7 +4,7 @@
 <ul>
   <li *ngFor="let album of albumes| paginate: { itemsPerPage: 5, currentPage: page }">
     <p>{{album.title}}</p>
-    <button mat-raised-button mat-button color="warn" (click)="mostrarDialogo(album.id)">pop up</button>
+    <button mat-raised-button mat-button color="warn" (click)=" showDialog(album.id)">Ver mas</button>
 
   </li>
 </ul>
