@@ -1,2 +1,10 @@
+<div class="row">
 <p>albumes</p>
+<ul>
+  <li *ngFor="let album of albumes">
+    <p>{{album.title}}</p>
+    <button mat-raised-button mat-button color="warn" (click)="mostrarDialogo(album.id)">pop up</button>
 
+  </li>
+</ul>
+</div>

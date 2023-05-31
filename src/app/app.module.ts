@@ -16,6 +16,9 @@ import { ServiceUsers } from '../services/serviceUsers';
 import { servicePost } from '../services/servicePost';
 import { serviceAlbumes } from 'src/services/serviceAlbumes';
 import { SeacherComponent } from './components/input/searcher.component';
+import { AlbumesComponent } from './pages/albumes/albumesAll/albumes.component';
+import { PostListComponent } from './components/postList/post-list.component';
+import { CommentListComponent } from './components/commentList/comment-list.component';
 
 
 @NgModule({
@@ -32,13 +35,17 @@ import { SeacherComponent } from './components/input/searcher.component';
     UserByIdComponent,
     UsersAllComponent,
     DialogoConfirmacionComponent,
-    SeacherComponent
+    SeacherComponent,
+    AlbumesComponent,
+    PostListComponent,
+    CommentListComponent
   ],
   providers: [
     HttpClient,
     ServiceUsers,
     servicePost,
-    serviceAlbumes],
+    serviceAlbumes
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

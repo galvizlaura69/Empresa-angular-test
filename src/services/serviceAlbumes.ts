@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { album } from 'src/app/models/album.model';
+
 const API_URL = `https://jsonplaceholder.typicode.com`;
 
 @Injectable({
@@ -25,6 +27,16 @@ export class serviceAlbumes {
             }
           })
           return filteredAlbumes})
+        );
+  }
+
+  public getAlbumById(id:number): Observable<album> {
+    return this.http
+      .get<album>(
+        `${API_URL}/photos/${id}`
+      )
+      .pipe(
+        map((res) => res)
         );
   }
 }

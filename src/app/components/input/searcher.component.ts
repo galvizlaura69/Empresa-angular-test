@@ -1,5 +1,4 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { ServiceUsers } from 'src/services/serviceUsers';
 
 @Component({
   selector: 'searcher',

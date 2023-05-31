@@ -17,7 +17,6 @@ export class UserByIdComponent {
     private route: ActivatedRoute,
     private router: Router,
     private serviceUsers: ServiceUsers,
-    private servicePost: servicePost
   ) {}
 
   ngOnInit() {
@@ -27,14 +26,6 @@ export class UserByIdComponent {
     this.serviceUsers.getUsersById(this.user.id).subscribe((res) => {
       this.user = res;
       console.log("usuario seleccionado",this.user);
-    });
-      this.servicePost.getPostByUserId(this.user.id).subscribe((res) => {
-      this.postByUser = res;
-      console.log("sus post",this.postByUser);
-    });
-    this.servicePost.getComentByPostId(this.user.id).subscribe((res) => {
-      this.comentByPost  = res;
-      console.log(" sus comentarios por post",this.comentByPost );
     });
   }
 

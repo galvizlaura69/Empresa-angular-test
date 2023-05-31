@@ -1,0 +1,7 @@
+.cdk-global-overlay-wrapper {
+  background: #ff000078;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+}
