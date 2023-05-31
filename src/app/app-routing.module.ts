@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UsersAllComponent } from './pages/users/usersAll/usersAll.component';
 import { UserByIdComponent } from './pages/users/userById/userById.component';
-import { AlbumesComponent } from './pages/albumes/albumesAll/albumes.component';
+import { AlbumesComponent } from './pages/albumes/albumes.component';
 
 const routes: Routes = [
   { path: '', component: UsersAllComponent },
