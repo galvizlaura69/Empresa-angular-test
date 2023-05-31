@@ -13,3 +13,9 @@
   align-items: center;
   padding-bottom: 20px;
 }
+
+.form-control{
+  padding: 20px;
+  display: block;
+  margin: auto;
+}
