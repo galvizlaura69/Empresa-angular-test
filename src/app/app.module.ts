@@ -15,6 +15,7 @@ import { DialogoConfirmacionComponent } from './components/dialogo-confirmacion.
 import { ServiceUsers } from '../services/serviceUsers';
 import { servicePost } from '../services/servicePost';
 import { serviceAlbumes } from 'src/services/serviceAlbumes';
+import { SeacherComponent } from './components/input/searcher.component';
 
 
 @NgModule({
@@ -30,7 +31,9 @@ import { serviceAlbumes } from 'src/services/serviceAlbumes';
     CelsiusPipe,
     UserByIdComponent,
     UsersAllComponent,
-    DialogoConfirmacionComponent],
+    DialogoConfirmacionComponent,
+    SeacherComponent
+  ],
   providers: [
     HttpClient,
     ServiceUsers,

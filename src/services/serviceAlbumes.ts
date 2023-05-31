@@ -12,18 +12,19 @@ export class serviceAlbumes {
 
   public getAlbumes(): Observable<any> {
     return this.http
-      .get(
+      .get<Array<any>>(
         `${API_URL}/photos`
       )
-      .pipe(map((res) => res));
-  }
-
-  public getAlbumById(id: any): Observable<any> {
-    return this.http
-      .get<Array<any>>(`${API_URL}/photos/${id}`)
       .pipe(
-        map((data) =>
-          data.filter((album:any) => album.albumId === parseInt(id))
-        ))
+        map((res) => {
+          let initialAlbumId = 0;
+          let filteredAlbumes = res.filter(album => {
+            if(initialAlbumId != album.albumId){
+              initialAlbumId =  album.albumId;
+              return album;
+            }
+          })
+          return filteredAlbumes})
+        );
   }
 }

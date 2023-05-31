@@ -1,4 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
+import { ServiceUsers } from 'src/services/serviceUsers';
 
 @Component({
   selector: 'searcher',
@@ -7,6 +8,9 @@ import { Component, OnInit, Inject } from '@angular/core';
 })
 export class SeacherComponent implements OnInit {
 
+
+  constructor(
+  ) {}
 
 
   ngOnInit() {
