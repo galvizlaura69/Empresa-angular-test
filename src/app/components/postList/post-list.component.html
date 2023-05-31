@@ -1,6 +1,7 @@
+<div >
 <h1 class="title">POST DEL USUARIO</h1>
-<ul>
-  <li *ngFor="let post of listPost">
+<ul >
+  <li class="post-container"  *ngFor="let post of listPost">
     <p>
       <span class="subtitle">Title post #{{post.id}}:</span> {{post.title}}
     </p>
@@ -8,6 +9,6 @@
       <span class="subsubtitle">Contenido:</span> {{post.body}}
     </p>
     <comment-list [postId]="post.id"></comment-list>
-
   </li>
 </ul>
+</div>
