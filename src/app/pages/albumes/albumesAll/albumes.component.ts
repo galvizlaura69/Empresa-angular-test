@@ -13,6 +13,7 @@ import { serviceAlbumes } from 'src/services/serviceAlbumes';
 export class AlbumesComponent implements OnInit{
   public albumes: any;
   public selectedAlbum: any;
+  public page: any;
 
   constructor(
     private router:Router,

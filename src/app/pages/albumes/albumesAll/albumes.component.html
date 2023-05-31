@@ -1,10 +1,14 @@
 <div class="row">
 <p>albumes</p>
+
 <ul>
-  <li *ngFor="let album of albumes">
+  <li *ngFor="let album of albumes| paginate: { itemsPerPage: 7, currentPage: page }">
     <p>{{album.title}}</p>
     <button mat-raised-button mat-button color="warn" (click)="mostrarDialogo(album.id)">pop up</button>
 
   </li>
 </ul>
+
+  <pagination-controls (pageChange)="page = $event"></pagination-controls>
+
 </div>

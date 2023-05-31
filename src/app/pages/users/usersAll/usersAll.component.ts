@@ -11,7 +11,7 @@ export class UsersAllComponent implements OnInit{
   public initialUserList:any ;
   public users :any ;
   public filterInput: string = '';
-  public p: any;
+  public page: any;
 
   constructor(
     private router: Router,
