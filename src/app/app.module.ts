@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { UserByIdComponent } from './pages/users/userById/userById.component';
 import { UsersAllComponent } from './pages/users/usersAll/usersAll.component';
 import { DialogoConfirmacionComponent } from './components/dialogo-confirmacion.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { ServiceUsers } from '../services/serviceUsers';
 import { servicePost } from '../services/servicePost';
@@ -17,7 +18,6 @@ import { serviceAlbumes } from 'src/services/serviceAlbumes';
 import { AlbumesComponent } from './pages/albumes/albumesAll/albumes.component';
 import { PostListComponent } from './components/postList/post-list.component';
 import { CommentListComponent } from './components/commentList/comment-list.component';
-import { FilterPipe } from '../pipes/filter.pipe';
 
 
 @NgModule({
@@ -27,6 +27,7 @@ import { FilterPipe } from '../pipes/filter.pipe';
     FormsModule,
     HttpClientModule,
     MatDialogModule,
+    NgxPaginationModule
   ],
   declarations: [
     AppComponent,
@@ -36,7 +37,6 @@ import { FilterPipe } from '../pipes/filter.pipe';
     AlbumesComponent,
     PostListComponent,
     CommentListComponent,
-    FilterPipe
   ],
   providers: [
     HttpClient,
