@@ -1,2 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+
+.page-container{
+  display: block;
+  margin: auto;
+  max-width: 600px;
+  border: 1px solid gray;
+  padding: 15px;
+}
+
+.container-paginator{
+  display: flex;
+  justify-content: center;
+}

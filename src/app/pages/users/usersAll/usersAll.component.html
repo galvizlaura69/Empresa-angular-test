@@ -1,17 +1,18 @@
-<div class="row">
-<p>todos los usuarios</p>
-<input
+<div class="row page-container">
+<input matInput
 class="form-control"
 type="text"
 [(ngModel)]="filterInput"
-placeholder="Search"
+placeholder="Buscar por nombre o id"
 (keyup)="changeFilter($event)" />
-<ul>
-<li *ngFor="let user of users  | paginate: { itemsPerPage: 4, currentPage: page }">
-  {{ user.name }}
-  <button mat-raised-button mat-button color="warn" (click)="userSelected(user.id)">ver</button></li>
-</ul>
-
-<pagination-controls (pageChange)="page = $event"></pagination-controls>
+  <ul class="container">
+    <li class="users-container"  *ngFor="let user of users  | paginate: { itemsPerPage: 4, currentPage: page }">
+      <span>{{user.id}}</span>
+      <span>{{user.name}}</span>
+      <button mat-raised-button mat-button color="warn" (click)="userSelected(user.id)">Ver</button></li>
+    </ul>
+<div class="container-paginator">
+  <pagination-controls (pageChange)="page = $event"></pagination-controls>
+</div>
 
 </div>

@@ -2,3 +2,14 @@
   border: 1px solid white;
   border-radius: 5px !important;
 }
+
+.container{
+  padding: 10px;
+}
+
+.users-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
