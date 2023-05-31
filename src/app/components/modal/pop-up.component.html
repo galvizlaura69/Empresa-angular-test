@@ -1,9 +1,10 @@
 
 <div mat-dialog-content>
-  <h1 mat-dialog-title>{{body.title}}</h1>
-    <img [src]="body.url" class="thumb"/>
-
-</div>
-<div mat-dialog-actions>
-    <button mat-button (click)="closeDialog()">cerrar</button>
+  <div mat-dialog-actions>
+    <button  class="buttonClose"
+    mat-button (click)="closeDialog()">X</button>
+  </div>
+  <p class="title" mat-dialog-title>TITLE ALBUM</p>
+  <p class="title-popUp" mat-dialog-title>{{body.title}}</p>
+  <img  [src]="body.url" class="thumb"/>
 </div>

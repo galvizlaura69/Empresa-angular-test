@@ -32,7 +32,7 @@ export class AlbumesComponent implements OnInit{
     this.selectedAlbum = res;
     this.dialog
     .open(PopUpComponent, {
-      data:{title:this.selectedAlbum.title, url:this.selectedAlbum.url}
+      data:{title:this.selectedAlbum.title, url:this.selectedAlbum.thumbnailUrl}
     })
     .afterClosed()
     .subscribe();
