@@ -1,7 +1,7 @@
 <div class="row page-container">
 <H1 class="title">ALBUMES</H1>
 <ul>
-  <li class="albumes-container" *ngFor="let album of albumes| paginate: { itemsPerPage: 5, currentPage: page }">
+  <li class="albumes-container" *ngFor="let album of albumes| paginate: { itemsPerPage: 4, currentPage: page }">
     <p class="tilte-album">{{album.title}}</p>
     <button mat-raised-button mat-button color="warn" (click)=" showDialog(album.id)">Ver mas</button>
   </li>

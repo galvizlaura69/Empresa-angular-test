@@ -1,7 +1,7 @@
 <div class="body-container">
-<ul>
-  <li><a [routerLink]="['/albumes']">Albumes</a></li>
-  <li><a [routerLink]="['/users']">Users</a></li>
-</ul>
+  <div class="menu-container">
+  <a class="menu" [routerLink]="['/albumes']">Albumes</a>
+  <a class="menu" [routerLink]="['/users']">Users</a>
+</div>
 <router-outlet></router-outlet>
 </div>
