@@ -19,7 +19,6 @@ listPost: any;
   ngOnInit() {
     this.servicePost.getPostByUserId(this.userId).subscribe((res) => {
       this.listPost = res;
-      console.log("list post",this.listPost);
     });
   }
 

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { album } from 'src/app/models/album.model';
+import { albumModel } from 'src/app/models/album-Model.model';
 
 const API_URL = `https://jsonplaceholder.typicode.com`;
 
@@ -30,9 +30,9 @@ export class serviceAlbumes {
         );
   }
 
-  public getAlbumById(id:number): Observable<album> {
+  public getAlbumById(id:number): Observable<albumModel> {
     return this.http
-      .get<album>(
+      .get<albumModel>(
         `${API_URL}/photos/${id}`
       )
       .pipe(

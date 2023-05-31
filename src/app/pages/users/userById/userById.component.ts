@@ -25,7 +25,6 @@ export class UserByIdComponent {
     });
     this.serviceUsers.getUsersById(this.user.id).subscribe((res) => {
       this.user = res;
-      console.log("usuario seleccionado",this.user);
     });
   }
 

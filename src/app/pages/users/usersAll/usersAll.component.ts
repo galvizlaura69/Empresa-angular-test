@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChanges} from '@angular/core';
 import { Router } from '@angular/router';
 import { ServiceUsers } from 'src/services/serviceUsers';
 
@@ -9,6 +9,7 @@ import { ServiceUsers } from 'src/services/serviceUsers';
 })
 export class UsersAllComponent implements OnInit{
   public users :any ;
+  public filterInput: string = '';
 
   constructor(
     private router: Router,
@@ -18,10 +19,11 @@ export class UsersAllComponent implements OnInit{
   ngOnInit() {
     this.serviceUsers.getUsers( ).subscribe((res) => {
       this.users = res;
-      console.log("todos los usuarios",this.users);
     });
+
   }
-  userSelected(id:any) {
+
+    userSelected(id:any) {
     this.router.navigate(['/user', id]);
   }
 }

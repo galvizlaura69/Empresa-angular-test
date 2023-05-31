@@ -17,10 +17,8 @@ export class CommentListComponent implements OnInit {
 
 
   ngOnInit() {
-    console.log("id post en comment", this.postId);
     this.servicePost.getComentByPostId(this.postId).subscribe((res) => {
       this.commentsByPost  = res;
-      console.log(" sus comentarios por post",this.commentsByPost );
     });
   }
 

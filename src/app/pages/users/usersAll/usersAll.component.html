@@ -1,8 +1,8 @@
 <div class="row">
 <p>todos los usuarios</p>
-<searcher></searcher>
+<input class="form-control" type="text" [(ngModel)]="filterInput" placeholder="Search">
 <ul>
-  <li *ngFor="let user of users">
+  <li *ngFor="let user of users | filter: filterInput; let i = index">
     <p>{{ user.name }}</p>
     <button mat-button (click)="userSelected(user.id)">Ver mas</button>
   </li>
