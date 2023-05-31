@@ -1,0 +1,12 @@
+.user-card {
+  border: 1px solid red;
+  padding: 15px;
+  max-width: 80%;
+  margin: auto;
+}
+
+
+.users-body{
+  font-size: 18px;
+  color: red;
+}

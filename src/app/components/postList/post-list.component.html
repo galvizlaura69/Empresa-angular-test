@@ -1,8 +1,12 @@
-<p>post lista</p>
+<h1 class="title">POST DEL USUARIO</h1>
 <ul>
   <li *ngFor="let post of listPost">
-    <p>{{post.title}}</p>
-    <p>{{post.body}}</p>
+    <p>
+      <span class="subtitle">Title post #{{post.id}}:</span> {{post.title}}
+    </p>
+    <p>
+      <span class="subsubtitle">Contenido:</span> {{post.body}}
+    </p>
     <comment-list [postId]="post.id"></comment-list>
 
   </li>

@@ -1,8 +1,11 @@
-<p>comentarios por post</p>
+<h1 class="subtitle">Comentarios</h1>
 <ul>
-  <li *ngFor="let comment of commentsByPost">
-    <p>{{comment.name}}</p>
-    <p>{{comment.email}}</p>
-    <p>{{comment.body}}</p>
+  <li class="comment-container" *ngFor="let comment of commentsByPost">
+    <p>
+      <span class="subsubtitle">Comentado por:</span> {{comment.email}}
+    </p>
+    <p>
+      <span class="subsubtitle">Contenido</span> {{comment.body}}
+    </p>
   </li>
 </ul>
